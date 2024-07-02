@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularIspitniProjekat": {
+    "AngularaIspit": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-ispitni-projekat",
+            "outputPath": "dist/angulara-ispit",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -51,10 +51,12 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output":"/assets/"
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -87,10 +89,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AngularIspitniProjekat:build:production"
+              "buildTarget": "AngularaIspit:build:production"
             },
             "development": {
-              "buildTarget": "AngularIspitniProjekat:build:development"
+              "buildTarget": "AngularaIspit:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,10 +111,12 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "/assets/"
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,5 +124,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
