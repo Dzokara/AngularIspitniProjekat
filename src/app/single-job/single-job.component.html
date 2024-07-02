@@ -2,11 +2,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <h1 class="text-white font-weight-bold">{{ job.position }}</h1>
+          <h1 class="text-white font-weight-bold">{{ job.position.name }}</h1>
           <div class="custom-breadcrumbs">
             <a href="#">Home</a> <span class="mx-2 slash">/</span>
             <a href="#">Job</a> <span class="mx-2 slash">/</span>
-            <span class="text-white"><strong>{{ job.position }}</strong></span>
+            <span class="text-white"><strong>{{ job.position.name }}</strong></span>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
               <img [src]="'http://localhost:5048/' + job.company.image" alt="Image">
             </div>
             <div>
-              <h2>{{ job.position }}</h2>
+              <h2>{{ job.position.name }}</h2>
               <div>
                 <span class="ml-0 mr-2 mb-2"><span class="icon-briefcase mr-2"></span>{{ job.company.name }}</span>
                 <span class="m-2"><span class="icon-room mr-2"></span>{{ job.region.name }}</span>
